@@ -1,130 +1,92 @@
-/* Style général */
+/* Style global */
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f0f0f0;
-    color: #333;
+    font-family: Arial, sans-serif;
 }
 
-/* Header */
 header {
     background-color: #333;
-    padding: 20px;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
 }
 
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
 }
 
-header nav ul li a {
-    color: #fff;
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
     text-decoration: none;
+    color: #333;
     font-weight: bold;
 }
 
-/* Sections */
 section {
-    padding: 50px 20px;
+    padding: 20px;
     text-align: center;
 }
 
-/* About */
-#about {
-    background-color: #ffffff;
-    margin: 20px 0;
-}
-
-/* Services */
-#services {
-    background-color: #e3e3e3;
-}
-
-#services ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#services ul li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Portfolio */
-#portfolio {
-    background-color: #ffffff;
-}
-
-.portfolio-container {
+.gallery {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.portfolio-item {
-    background-color: #f0f0f0;
-    width: 250px;
+.gallery .item {
+    width: 30%;
+    margin: 10px;
     text-align: center;
-    padding: 15px;
-    border-radius: 8px;
 }
 
-.portfolio-item img {
+.gallery .placeholder {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.portfolio-item p {
-    margin-top: 10px;
-}
-
-/* Contact */
-#contact {
-    background-color: #e3e3e3;
-}
-
-#contact form {
+    height: 100px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
 
-#contact form input,
-#contact form textarea {
-    width: 80%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contact form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Footer */
 footer {
     background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    color: white;
+    padding: 10px 0;
     text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .portfolio-container {
-        flex-direction: column;
-        align-items: center;
+/* Styles responsifs */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .gallery .item {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .gallery .placeholder {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .gallery .placeholder {
+        font-size: 14px;
     }
 }

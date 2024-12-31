@@ -1,88 +1,90 @@
+/* Style de base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: #4CAF50;
+    background-color: #333;
     color: white;
-    padding: 20px 10px;
+    padding: 20px;
     text-align: center;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    background: #333;
+    background-color: #333;
     margin: 0;
+    text-align: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
 section {
     padding: 20px;
-    text-align: center;
-}
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.gallery .item {
-    width: 300px;
-    text-align: center;
-}
-
-.gallery .placeholder {
-    height: 200px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-form input, form textarea, form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-}
-
-form button {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background: #333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Formulaire */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+}
+
+.placeholder {
+    padding: 50px;
+    font-size: 20px;
+    border-radius: 8px;
 }
